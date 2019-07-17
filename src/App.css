@@ -1,33 +1,29 @@
-.App {
-  text-align: center;
+.App{
+  margin: 0 auto;
+  max-width: 500px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width:520px) { 
+  /*　画面サイズが520pxからはここを読み込む　*/
+  .App{
+    margin: 0 20px;
+  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App ul {
+  margin: 10px auto;
+}
+
+.App ul li {
+  padding-left: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App ul .MuiDivider-inset{
+  margin-left: 57px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App ul li .MuiListItemAvatar-alignItemsFlexStart {
+  margin-top: 0;
 }
