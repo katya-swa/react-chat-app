@@ -25,7 +25,7 @@ class AppChat extends Component {
       <MuiThemeProvider>
         <div className="App">
           <div className="App-header">
-            <h2>ちょっと一息チャット</h2>
+            <h2>ちょっと一息チャットルーム</h2>
           </div>
           <div className="MessageList">
             {this.state.messages.map((m, i) => {
@@ -56,10 +56,10 @@ class AppChat extends Component {
 
   onButtonClick() {
     if(this.state.user_name === "") {
-      alert('user_name empty')
+      alert('ユーザー名を入力してください')
       return
     } else if(this.state.text === "") {
-      alert('text empty')
+      alert('テキストを入力してください')
       return
     }
     messagesRef.push({
