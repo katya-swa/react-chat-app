@@ -3,6 +3,9 @@ import Avatar from 'material-ui/Avatar';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import Chip from 'material-ui/Chip';
+import { firebaseDb } from './../firebase/index.js'
+
+const messagesRef = firebaseDb.ref('messages')
 const styles = {
   chip: {
     margin: 4,
@@ -15,6 +18,14 @@ const styles = {
 
 
 export default class Message extends React.Component {
+  constructor(props) {
+    super(props)
+    this.onRemoveClick = this.onRemoveClick.bind(this)
+  }
+  onRemoveClick(){
+     messagesRef.child(this.props.message.key).remove()
+     alert('メッセージはページを更新後に削除されます')
+  }
   render() {
     return (
       <div className="Message">
@@ -25,6 +36,7 @@ export default class Message extends React.Component {
           <div className="">
             <Chip style={styles.chip} >
               {this.props.message.text}
+              <button onClick={this.onRemoveClick}>削除</button>
             </Chip>
           </div>
         </ListItem>

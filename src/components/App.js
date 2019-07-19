@@ -78,6 +78,7 @@ class AppChat extends Component {
         'text' : m.text,
         'user_name' : m.user_name,
         'profile_image' : m.profile_image,
+        'key': snapshot.key
       })
 
       this.setState({
