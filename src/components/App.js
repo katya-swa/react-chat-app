@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import '../App.css';
 import { firebaseDb } from './../firebase/index.js'
 import Message from './message.js'
@@ -6,6 +7,8 @@ import ChatBox from './chatBox.js'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const messagesRef = firebaseDb.ref('messages')
+const appElement = document.getElementById('content');
+Modal.setAppElement(appElement);
 
 class AppChat extends Component {
   constructor(props) {
@@ -16,7 +19,7 @@ class AppChat extends Component {
       text : "",
       user_name: "",
       profile_image: "",
-      messages : []
+      messages : [],
     }
   }
 
