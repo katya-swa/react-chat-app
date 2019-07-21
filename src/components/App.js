@@ -29,6 +29,7 @@ class AppChat extends Component {
         <div className="App">
           <div className="App-header">
             <h2>ちょっと一息チャットルーム</h2>
+            <p>読んだら消してください。最新の投稿は一番下に表示されます。</p>
           </div>
           <div className="MessageList">
             {this.state.messages.map((m, i) => {

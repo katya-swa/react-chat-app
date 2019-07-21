@@ -43,7 +43,7 @@ export default class Message extends React.Component {
   }
   onRemoveClick(){
      messagesRef.child(this.props.message.key).remove()
-     alert('メッセージはページを更新後に削除されます')
+     alert('メッセージはページを更新すると削除されます。')
   }
 
   openModal() {

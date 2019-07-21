@@ -28,5 +28,7 @@
 }
 
 .ChatBox {
-
+  position: absolute;
+  top: 150px;
+  right: 150px;
 }
